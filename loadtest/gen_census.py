@@ -3,8 +3,8 @@ import requests
 
 
 HOST = "http://localhost:8000"
-USER = "admin"
-PASS = "admin"
+USER = "framigdom"
+PASS = "Tomate98"
 VOTING = 1
 
 
@@ -41,7 +41,7 @@ def add_census(voters_pk, voting_pk):
     token = response.json()
 
     data2 = {'voters': voters_pk, 'voting_id': voting_pk}
-    auth = {'Authorization': 'Token ' + token.get('token')}
+    auth = {'Authorization': 'Token' + token.get('token')}
     response = requests.post(HOST + '/census/', json=data2, headers=auth)
 
 
